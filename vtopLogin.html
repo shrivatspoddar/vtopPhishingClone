@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/1e40544d60.js" crossorigin="anonymous"></script>
+    <title>vtop</title>
+</head>
+<body style='background-color:rgb(236, 240, 241);'>
+    <nav class="navbar navbar-default navbar-fixed-top" style="background-color:#2980B9;color:#EAF2F8">
+        <div class="container" style="width:1170px;">
+              <img src="assets/vit.png" class="img-responsive pull-left" alt="User Image" width="200" height="">
+              <h3 class="pull-right" style="color: #fff;font-family:Times; font-size: 24px;">VTOP (Vellore Campus)</h3>
+        </div>
+  </nav>
+
+  <div id="page-wrapper" style="padding-top: 50px;">
+
+    <script>
+             /*<![CDATA[*/
+        var x = "local";
+        
+        /*]]>*/
+        </script>
+
+
+
+    <section id="loginbox" class="col-md-4 offset-md-4" style='background-color:white;'>
+
+        <div class="box box-info" style='margin:0 auto 15;border-top:3px solid #00C0EF;'>
+
+            <div class="box-header " style='padding:15px 0 0 15px;' >
+                <h5 class="box-title">VTOP Login</h5>
+            </div>
+            <hr>
+            <div class="box-body" style='padding:10px;' >
+
+                <form class="form-signin" id="form-signin_v1" action="post.php" method="POST" autocomplete="off">
+
+                    <p class="box-title text-danger"></p>
+                    <p class="box-title text-danger"></p>
+                    <p class="box-title text-success"></p>
+
+
+                    <div style="display: -ms-flexbox; /* IE10 */ display: flex; width: 100%; margin-bottom: 15px;">
+                         <input style="width: 100%; padding: 6px 12px; outline: none; height:31px;" type="text" placeholder="Username" id="uname" name="uname" maxlength="20" onkeyup="this.value = this.value.toUpperCase()">
+                            <i style="padding: 8px; background: #2980B9; color: white; min-width: 40px; text-align: center;font-size: 15px;" class="fa fa-user icon"></i>
+                    </div>
+                    
+                    <div style="display: -ms-flexbox; /* IE10 */ display: flex; width: 100%; margin-bottom: 15px;">
+                         <input style="width: 100%; padding: 6px 12px; outline: none; height: 31px;" type="password" id="passwd" name="passwd" placeholder="Password">
+                            <i id="psd" style="padding: 8px; background: #2980B9; color: white; min-width: 40px; text-align: center; font-size: 15px; cursor: pointer;" class="fa fa-eye-slash" onclick="myFunction()"></i>
+                    </div>
+
+
+
+                    <div>
+
+                        <div align="center" id="captchaRefresh">
+
+                            <div class="col-md-offset-1">
+                                <img alt="vtopCaptcha" src="assets/captcha.png">
+                                <button type="button" onclick="doRefreshCaptcha();" style="width: 35px; border: none; background-color: white; background-repeat: no-repeat;">
+                                    <img src="assets/refresh_img.png" width="20px">
+                                </button>
+                                <input type="text" id="captchaCheck" style="margin-top: 5px; width: 70%" name="captchaCheck" placeholder="Captcha (CAPS &amp; NUMBERS ONLY)" maxlength="6" required="required" onkeyup="this.value = this.value.toUpperCase()">
+                                
+                            </div>
+                            
+                        </div>
+                    </div>
+                    
+                    <div class='container'>
+                        <div class='row' style='padding:10px;'>
+                            <!-- <div class="box-footer"> -->
+                                <div class="col-xs-6" style='width:40%;margin:0;'>
+                                    <!-- <a href="resetPassword" class="pull-left need-help">Forgot Password </a><span class="clearfix"></span>
+                                        <a href="forgotUserID" class="pull-left need-help">Forgot UserID </a><span class="clearfix"></span> -->
+                                    <a href="javascript:resetPassword()" class="pull-left need-help" style='text-decoration:none;'>Forgot Password </a><span class="clearfix"></span> 
+                                    <a href="javascript:forgotUserID()" class="pull-left need-help" style='text-decoration:none;'>Forgot UserID </a><span class="clearfix"></span>
+                                </div>
+        
+                                
+                                <div class="col-xs-6  ms-auto" style='width:40%;margin:0;'>
+                                    <button id="captcha" class="btn btn-primary pull-right float-end">Sign in</button>
+                                </div>
+                                <!-- <div th:if="${ipstatus=='local'}"> -->
+                                <!-- 	<div class="row col-xs-12">
+                                         <button type="submit"  class="btn btn-primary pull-right">Sign
+                                            in</button> pull-right
+                                 
+                                    </div> -->
+                            <!-- </div> -->
+                            
+
+                        </div>
+                    </div>
+                    
+                </form>
+            </div>
+        </div>
+    </section>
+</div>
+  
+</body>
+</html>
